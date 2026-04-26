@@ -1,3 +1,4 @@
+require 'pry-byebug'
 # First, we're going to practice reading the Stack Trace
 # Don't look at this method prior to running the test
 # Type 'rspec' into the terminal to run Rspec
@@ -37,7 +38,9 @@ end
 
 def isogram?(string)
   original_length = string.length
-  string_array = string.downcase.split
+  puts original_length
+  string_array = string.downcase.split("")
+  p string_array
   unique_length = string_array.uniq.length
   original_length == unique_length
 end
@@ -50,7 +53,8 @@ end
 # Once you find the error, fix it and get the test to pass
 
 def yell_greeting(string)
+  binding.pry
   name = string
-  name = name.downcase
+  name = name.upcase
   greeting = "WASSAP, #{name}!"
 end
