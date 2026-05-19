@@ -80,5 +80,5 @@ def find_favorite(array_of_hash_objects)
       end
     end
   end
-  return nil
+  nil
 end
